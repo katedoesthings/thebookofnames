@@ -181,24 +181,76 @@ function bingly(){
 	}
 	else if (numOfNames > 100)
 	{
-	for(let i = 0; i < 100; i++)
-		{
-			//if(firstLetterPref.charAt(0) == " " || firstLetterPref == null)
+	for(let i = 0; i < 100; i++){
+		if(isLetter(firstLetterPref.charAt(0)) == false || firstLetterPref == null)
 			{
 				randomItem = tarr[Math.floor(Math.random()*tarr.length)];
 			}
+			else if (isLetter(firstLetterPref.charAt(0)) == true)
+			{
+				randomItem = tarr[Math.floor(Math.random()*tarr.length)];
+				//randomItem = randomItem.toString().substring(0,1);
+				//randomItem = "aus";
+				
+				while (randomItem.charAt(0).toLowerCase() != firstLetterPref.charAt(0).toLowerCase())
+				{
+					randomItem = tarr[Math.floor(Math.random()*tarr.length)];
+				}
+				
+			}
 			//if (lastnameLetterPref.charAt(0) == " " || lastnameLetterPref == null)
+			if(isLetter(lastnameLetterPref.charAt(0)) == false || firstLetterPref == null)
 			{
 				randomItem2 = tarr[Math.floor(Math.random()*tarr.length)];
 			}
+			else if (isLetter(lastnameLetterPref.charAt(0)))
+			{
+				randomItem2 = tarr[Math.floor(Math.random()*tarr.length)];
+
+				while (randomItem2.charAt(0).toLowerCase() != lastnameLetterPref.charAt(0).toLowerCase())
+				{
+					randomItem2 = tarr[Math.floor(Math.random()*tarr.length)];
+				}
+			}
 			document.getElementById("thelist").innerHTML = document.getElementById("thelist").innerHTML + randomItem + " " + randomItem2 + "<br>";
-		}
+			}
+
 		document.getElementById("thelist").innerHTML = document.getElementById("thelist").innerHTML+ "<br>" + "YOU HAVE ATTEMPTED TO GAIN TOO MUCH KNOWLEDGE, AND HAVE BEEN CAPPED AT 100.";
 	}
 
 	else
 	{
-	document.getElementById("thelist").innerHTML = document.getElementById("thelist").innerHTML + randomItem + " " + randomItem2 + "<br>";
+	if(isLetter(firstLetterPref.charAt(0)) == false || firstLetterPref == null)
+			{
+				randomItem = tarr[Math.floor(Math.random()*tarr.length)];
+			}
+			else if (isLetter(firstLetterPref.charAt(0)) == true)
+			{
+				randomItem = tarr[Math.floor(Math.random()*tarr.length)];
+				//randomItem = randomItem.toString().substring(0,1);
+				//randomItem = "aus";
+				
+				while (randomItem.charAt(0).toLowerCase() != firstLetterPref.charAt(0).toLowerCase())
+				{
+					randomItem = tarr[Math.floor(Math.random()*tarr.length)];
+				}
+				
+			}
+			//if (lastnameLetterPref.charAt(0) == " " || lastnameLetterPref == null)
+			if(isLetter(lastnameLetterPref.charAt(0)) == false || firstLetterPref == null)
+			{
+				randomItem2 = tarr[Math.floor(Math.random()*tarr.length)];
+			}
+			else if (isLetter(lastnameLetterPref.charAt(0)))
+			{
+				randomItem2 = tarr[Math.floor(Math.random()*tarr.length)];
+
+				while (randomItem2.charAt(0).toLowerCase() != lastnameLetterPref.charAt(0).toLowerCase())
+				{
+					randomItem2 = tarr[Math.floor(Math.random()*tarr.length)];
+				}
+			}
+			document.getElementById("thelist").innerHTML = document.getElementById("thelist").innerHTML + randomItem + " " + randomItem2 + "<br>";
 	}
 }
 
