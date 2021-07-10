@@ -91,7 +91,7 @@ background-color: #220051;
 }
 
 input[type=text] {
-  width: 12%;
+  width: 250px;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -108,7 +108,7 @@ input[type=text] {
 <p style="color:#FFA936; font-size:200%;">I have curated Exquisite names and now they are available for Your Use. Use Them Wisely.</p>
 <form class ="p3">
   <label for="howManyName">How Many Names:</label><br>
-  <input type="text" id="howManyName" style="width: 4%;"name="manyName" value="1"><br><br>
+  <input type="text" id="howManyName"name="manyName" value="1"><br><br>
 </form> 
 <form class ="p3">
   <label for="firstNameSpec">Only First Names That Start With This Letter:</label><br>
@@ -195,6 +195,11 @@ function bingly(){
 			document.getElementById("thelist").innerHTML = document.getElementById("thelist").innerHTML + randomItem + " " + randomItem2 + "<br>";
 		}
 		document.getElementById("thelist").innerHTML = document.getElementById("thelist").innerHTML+ "<br>" + "YOU HAVE ATTEMPTED TO GAIN TOO MUCH KNOWLEDGE, AND HAVE BEEN CAPPED AT 100.";
+	}
+
+	else
+	{
+	document.getElementById("thelist").innerHTML = document.getElementById("thelist").innerHTML + randomItem + " " + randomItem2 + "<br>";
 	}
 }
 
